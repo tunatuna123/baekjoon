@@ -1,11 +1,7 @@
 n = int(input())
-lst = list(map(int,input().split()))
-score = 1
-
-for i in lst:
-    ans = 0
-    streak = 0
-    if i == 1:
-        ans += score
-    else:
-        
+ans = 0
+lst = input().replace(' ', '')
+for i in lst.split('0'):
+    if i != '':
+        ans += (len(i)*(len(i)+1))//2
+print(ans)

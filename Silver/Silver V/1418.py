@@ -1,13 +1,16 @@
-n = int(input())
-k = int(input())
-arr = []
+import sys
+n = int(sys.stdin.readline())
+m = int(sys.stdin.readline())
 
-for i in range(1,int(n**(1/2))+1):
-    if (n/i).is_integer():
-        arr.append(i)
-        arr.append(int(n/i))
-arr.sort()
+s = [0 for i in range(n+1)]
+for i in range(2,n+1):
+    if s[i] == 0:
+        for t in range(i,n+1,i):
+            if t%i == 0:
+                s[t] = max(s[t],i)
 
-for i in range(len(arr)):
-    if arr[i] > k:
-        print(i)
+ans = 0
+for i in s:
+    if i <= m:
+        ans += 1
+print(ans-1)

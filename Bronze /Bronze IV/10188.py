@@ -1,7 +1,7 @@
 n = int(input())
-for i in range(3):
-    a,b = map(int,input().split())
-    if a <= 20 or b <= 20:
-        for i in range(b):
-            print("X"*a)
-    print()
+for i in range(n):
+    x,y = map(int, input().split())
+    for j in range(y):
+        print("X"*x)
+    if i != n-1:
+        print()

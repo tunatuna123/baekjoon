@@ -1,40 +1,37 @@
-n,m = map(int,input().split())
-arr = []
+h,w = map(int,input().split())
+chess = []
 ans = []
 
-def check_white(k):
-    count_w = 0
-    for i in range(8):
-        for j in range(8):
+for i in range(h):
+    chess.append(input())
+
+wb = [[] for i in range(h)]
+for i in range(8):
+    for j in range(8):
             if (i+j)%2 == 0:
-                if k[i][j] != 'W':
-                    count_w += 1
+                wb[i] += 'W'
             else:
-                if k[i][j] != 'B':
-                    count_w += 1
-    return count_w
+                wb[i] += 'B'
 
-def check_black(k):
-    count_b = 0
-    for i in range(8):
-        for j in range(8):
+bw = [[] for i in range(h)]
+for i in range(8):
+    for j in range(8):
             if (i+j)%2 == 0:
-                if k[i][j] != 'B':
-                    count_b += 1
+                bw[i] += 'B'
             else:
-                if k[i][j] != 'W':
-                    count_b += 1
-    return count_b
+                bw[i] += 'W'
 
-for i in range(n):
-    arr.append(list(input()))
+for i in range(h-8+1):
+    for j in range(w-8+1):
+        ans_1 = 0
+        ans_2 = 0
+        for k in range(8):
+            for t in range(8):
+                if chess[i+k][j+t] != wb[k][t]:
+                    ans_1 += 1
+                if chess[i+k][j+t] != bw[k][t]:
+                    ans_2 += 1
+        ans.append(ans_1)
+        ans.append(ans_2)
 
-for p in range(n-7):
-    for q in range(m-7):
-        for i in range(len(arr)-8):
-            for j in range(len(arr)-8):
-                print([row[i+q:i+8+q] for row in arr[j+p:j+8+p]])
-                ans.append(check_white([row[i+q:i+8+q] for row in arr[j+p:j+8+p]]))
-                ans.append(check_black([row[i+q:i+8+q] for row in arr[j+p:j+8+p]]))
-
-print(ans)
+print(min(ans))

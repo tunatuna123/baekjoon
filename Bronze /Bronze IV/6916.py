@@ -1,20 +1,120 @@
-m = " * * *"
-lr = "*     *"
-l = "*"
-r = "      *"
-n = ''
-
-dic = {0:m+'\n'+(lr+'\n')*3+n+'\n'+(lr+'\n')*3+m,
-1:(r+'\n')*3+n+'\n'+(r+'\n')*2+r,
-2:m+'\n'+(r+'\n')*3+m+'\n'+(l+'\n')*3+m,
-3:m+'\n'+(r+'\n')*3+m+'\n'+(r+'\n')*3+m,
-4:(lr+'\n')*3+m+'\n'+(r+'\n')*2+r,
-5:m+'\n'+(l+'\n')*3+m+'\n'+(r+'\n')*3+m,
-6:m+'\n'+(l+'\n')*3+m+'\n'+(lr+'\n')*3+m,
-7:m+'\n'+(r+'\n')*3+n+'\n'+(r+'\n')*2+r,
-8:m+'\n'+(lr+'\n')*3+m+'\n'+(lr+'\n')*3+m,
-9:m+'\n'+(lr+'\n')*3+m+'\n'+(r+'\n')*3+m}
-
-
 n = int(input())
-print(dic[n])
+
+def flat():
+    print(" * * *")
+def side():
+    print("*     *")
+def left():
+    print('*')
+def right():
+    print('      *')
+def empty():
+    print()
+
+if n == 0:
+    flat()
+    side()
+    side()
+    side()
+    empty()
+    side()
+    side()
+    side()
+    flat()
+
+
+elif n == 1:
+    empty()
+    right()
+    right()
+    right()
+    empty()
+    right()
+    right()
+    right()
+
+elif n == 2:
+    flat()
+    right()
+    right()
+    right()
+    flat()
+    left()
+    left()
+    left()
+    flat()
+
+elif n == 3:
+    flat()
+    right()
+    right()
+    right()
+    flat()
+    right()
+    right()
+    right()
+    flat()
+
+elif n == 4:
+    empty()
+    side()
+    side()
+    side()
+    flat()
+    right()
+    right()
+    right()
+
+elif n == 5:
+    flat()
+    left()
+    left()
+    left()
+    flat()
+    right()
+    right()
+    right()
+    flat()
+
+elif n == 6:
+    flat()
+    left()
+    left()
+    left()
+    flat()
+    side()
+    side()
+    side()
+    flat()
+
+elif n == 7:
+    flat()
+    right()
+    right()
+    right()
+    empty()
+    right()
+    right()
+    right()
+
+elif n == 8:
+    flat()
+    side()
+    side()
+    side()
+    flat()
+    side()
+    side()
+    side()
+    flat()
+
+elif n == 9:
+    flat()
+    side()
+    side()
+    side()
+    flat()
+    right()
+    right()
+    right()
+    flat()

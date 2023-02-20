@@ -6,3 +6,6 @@ while True:
         break
     else:
         distance = pi*(r/(12*5280))*n
+        mph = distance/(t/3600)
+        print('Trip #{}: {:.2f} {:.2f}'.format(i,distance,mph))
+        i += 1

@@ -1,4 +1,6 @@
 # Baekjoon
+[![wakatime](https://wakatime.com/badge/user/3976f0f8-d75a-466e-97a8-fd946cc4def8/project/4ca843a6-7dad-433b-8828-1b067f47f6c8.svg)](https://wakatime.com/badge/user/3976f0f8-d75a-466e-97a8-fd946cc4def8/project/4ca843a6-7dad-433b-8828-1b067f47f6c8)
+
 
 Python User
 
